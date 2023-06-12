@@ -1,6 +1,7 @@
-QT       += core gui multimedia
+QT       += core gui multimedia widgets
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+CONFIG += debug
+CONFIG += debug_and_release
 
 CONFIG += c++17
 
@@ -8,30 +9,39 @@ CONFIG += c++17
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-SOURCES += \
-    src/audiolist.cpp \
-    src/audioplayer.cpp \
-    src/consoleapender.cpp \
-    src/fileapender.cpp \
-    src/main.cpp \
-    src/musicform.cpp \
-    src/mywidget.cpp \
-    src/recordworkdialog.cpp \
-    src/setting.cpp \
-    src/widget.cpp
+
+msvc {
+    QMAKE_CFLAGS += \utf-8
+    QMAKE_CXXFLAGS += \utf-8
+}
+
+TEMPLATE = app
+TARGET = TomatoTimer
+
+#INCLUDEPATH += inc \
+
+SOURCES += src/main.cpp \
+        src/audiolist.cpp \
+        src/audioplayer.cpp \
+        src/consoleapender.cpp \
+        src/fileapender.cpp \
+        src/musicform.cpp \
+        src/mywidget.cpp \
+        src/recordworkdialog.cpp \
+        src/setting.cpp \
+        src/widget.cpp
 
 HEADERS += \
-    include/apender.h \
-    include/audiolist.h \
-    include/audioplayer.h \
-    include/consoleapender.h \
-    include/fileapender.h \
-    include/musicform.h \
-    include/mywidget.h \
-    include/recordworkdialog.h \
-    include/setting.h \
-    include/widget.h
-
+    inc/apender.h \
+    inc/audiolist.h \
+    inc/audioplayer.h \
+    inc/consoleapender.h \
+    inc/fileapender.h \
+    inc/musicform.h \
+    inc/mywidget.h \
+    inc/recordworkdialog.h \
+    inc/setting.h \
+    inc/widget.h
 
 FORMS += \
     ui/musicform.ui \
@@ -39,11 +49,10 @@ FORMS += \
     ui/setting.ui \
     ui/widget.ui
 
+RESOURCES += \
+    rc.qrc
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
-
-DISTFILES += \
-    hm_out_small.jpg \
-    icon.png

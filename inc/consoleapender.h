@@ -4,13 +4,11 @@
 
 #include "apender.h"
 
-
-
 class ConsoleApender : public Apender
 {
 public:
     ConsoleApender();
-    ~ConsoleApender() = default;
+    ~ConsoleApender(){};
     ssize_t writeLog(const QString &);
 };
 

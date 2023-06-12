@@ -2,10 +2,10 @@
     <qresource prefix="/images">
         <file>hm_out_small.jpg</file>
     </qresource>
-    <qresource prefix="/qss">
-        <file>default.qss</file>
-    </qresource>
     <qresource prefix="/icons">
         <file>icon.png</file>
+    </qresource>
+    <qresource prefix="/qss">
+        <file>default.qss</file>
     </qresource>
 </RCC>

@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/musics">
-        <file>dream-lamb.mp3</file>
-    </qresource>
-    <qresource prefix="/new/prefix1"/>
-</RCC>
