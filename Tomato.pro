@@ -9,39 +9,41 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    audiolist.cpp \
-    audioplayer.cpp \
-    consoleapender.cpp \
-    fileapender.cpp \
-    main.cpp \
-    musicform.cpp \
-    mywidget.cpp \
-    recordworkdialog.cpp \
-    setting.cpp \
-    widget.cpp
+    src/audiolist.cpp \
+    src/audioplayer.cpp \
+    src/consoleapender.cpp \
+    src/fileapender.cpp \
+    src/main.cpp \
+    src/musicform.cpp \
+    src/mywidget.cpp \
+    src/recordworkdialog.cpp \
+    src/setting.cpp \
+    src/widget.cpp
 
 HEADERS += \
-    apender.h \
-    audiolist.h \
-    audioplayer.h \
-    consoleapender.h \
-    fileapender.h \
-    musicform.h \
-    mywidget.h \
-    recordworkdialog.h \
-    setting.h \
-    widget.h
+    include/apender.h \
+    include/audiolist.h \
+    include/audioplayer.h \
+    include/consoleapender.h \
+    include/fileapender.h \
+    include/musicform.h \
+    include/mywidget.h \
+    include/recordworkdialog.h \
+    include/setting.h \
+    include/widget.h
+
 
 FORMS += \
-    musicform.ui \
-    recordworkdialog.ui \
-    setting.ui \
-    widget.ui
+    ui/musicform.ui \
+    ui/recordworkdialog.ui \
+    ui/setting.ui \
+    ui/widget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-RESOURCES += \
-    image.qrc
+DISTFILES += \
+    hm_out_small.jpg \
+    icon.png
