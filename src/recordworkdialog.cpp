@@ -1,4 +1,4 @@
-#include "recordworkdialog.h"
+#include "../inc/recordworkdialog.h"
 #include "ui_recordworkdialog.h"
 
 RecordWorkDialog::RecordWorkDialog(QWidget *parent) :

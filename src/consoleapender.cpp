@@ -1,5 +1,4 @@
-
-#include "consoleapender.h"
+#include "../inc/consoleapender.h"
 #include<QDebug>
 
 ConsoleApender::ConsoleApender()

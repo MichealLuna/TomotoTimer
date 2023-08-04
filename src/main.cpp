@@ -1,6 +1,6 @@
 
 //#include "widget.h"
-#include "mywidget.h"
+#include "../inc/mywidget.h"
 
 #include <QApplication>
 #include<QFile>

@@ -1,5 +1,5 @@
 
-#include "mywidget.h"
+#include "../inc/mywidget.h"
 #include<QCloseEvent>
 MyWidget::MyWidget()
 {

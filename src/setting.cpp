@@ -1,4 +1,4 @@
-#include "setting.h"
+#include "../inc/setting.h"
 #include "ui_setting.h"
 #include<QFileDialog>
 

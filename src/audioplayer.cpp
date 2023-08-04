@@ -1,5 +1,5 @@
 
-#include "audioplayer.h"
+#include "../inc/audioplayer.h"
 
 #include<QAudioOutput>
 

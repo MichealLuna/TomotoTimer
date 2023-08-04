@@ -1,4 +1,4 @@
-#include "musicform.h"
+#include "../inc/musicform.h"
 #include "ui_musicform.h"
 
 #include<QFileDialog>

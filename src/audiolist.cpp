@@ -1,5 +1,5 @@
 
-#include "audiolist.h"
+#include "../inc/audiolist.h"
 
 #include<QDir>
 #include<QFile>

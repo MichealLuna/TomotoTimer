@@ -3,7 +3,7 @@
 #include<QDebug>
 #include<QMenu>
 #include<QAction>
-#include "widget.h"
+#include "../inc/widget.h"
 #include "ui_widget.h"
 
 #include<QtMultimedia/QMediaPlayer>
