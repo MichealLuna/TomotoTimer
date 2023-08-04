@@ -3,6 +3,7 @@
 
 #include<QFileDialog>
 #include<QDir>
+#include<QCloseEvent>
 
 MusicForm::MusicForm(QWidget *parent) :
     QWidget(parent),
@@ -174,7 +175,7 @@ void MusicForm::sliderReleased(){
     m_timer.start();
 }
 
-//void MusicForm::closeEvent(QCloseEvent *event){
-//    (void*)event;
-//    hide();
-//}
+void MusicForm::closeEvent(QCloseEvent *event){
+    event->ignore();
+    hide();
+}

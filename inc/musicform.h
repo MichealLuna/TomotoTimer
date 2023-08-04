@@ -44,7 +44,7 @@ signals:
 protected:
     void updateTextBroswer();
     void __updateSlider(int pos);
-    //void closeEvent(QCloseEvent *event);
+    void closeEvent(QCloseEvent *event);
 private:
     Ui::MusicForm *ui;
     bool m_isPlaying = false;

@@ -101,8 +101,11 @@ Widget::~Widget()
 }
 
 void Widget::closeEvent(QCloseEvent *event){
-    event->ignore();
-    hide();
+    if(!trueClose)
+    {
+        event->ignore();
+        hide();
+    }
 }
 
 void Widget::on_Widget_customContextMenuRequested(const QPoint &point){
@@ -114,7 +117,7 @@ void Widget::on_Widget_customContextMenuRequested(const QPoint &point){
     Menu.addAction(&close);
 
     connect(&open,SIGNAL(triggered()),this,SLOT(show()));
-    connect(&close,SIGNAL(triggered()),this,SLOT(close()));
+    connect(&close,SIGNAL(triggered()),this,SLOT(setTrueClose()));
 
     Menu.exec(point);
 }
@@ -253,4 +256,9 @@ void Widget::onCurrenLineLight(){
 
     extraSelection.append(selection);
     ui->textBrowser->setExtraSelections(extraSelection);
+}
+
+void Widget::setTrueClose(){
+    trueClose = true;
+    close();
 }

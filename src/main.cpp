@@ -1,11 +1,10 @@
-
 //#include "widget.h"
 #include "../inc/mywidget.h"
 
 #include <QApplication>
 #include<QFile>
 
-#define DefaultQSS
+//#define DefaultQSS
 
 int main(int argc, char *argv[])
 {

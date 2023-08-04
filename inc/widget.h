@@ -47,6 +47,7 @@ private slots:
     void updateRecordState(int);
     void updateSaveState(int);
     void on_Widget_customContextMenuRequested(const QPoint& point);
+    void setTrueClose();
 protected:
     void closeEvent(QCloseEvent *event);
 signals:
@@ -79,6 +80,7 @@ private:
     Apender * apender;
 
     QSystemTrayIcon* m_trayIcon;
+    bool trueClose = false;
 };
 
 #endif // WIDGET_H
